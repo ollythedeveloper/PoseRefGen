@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pose Reference Generator</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>Pose Reference Generator</h1>
+
+        <form id="js-form">
+            <label for="js-pose">Please enter desired pose:</label><br>
+            <input type="text" name="pose" id="js-pose" placeholder="ex. person sitting down" required><br>
+
+            <input type="submit" value="Search">
+        </form>
+
+        <p id="js-error-message" class="error-message"></p>
+
+        <section id="image-results" class="hidden">
+            <hr>
+            <h2>Reference Images</h2>
+            <hr>
+            <ul id="image-result-list">
+            </ul>
+        </section>
+
+        <section id="video-results" class="hidden">
+            <hr>
+            <h2>How-To Videos</h2>
+            <hr>
+            <ul id="video-result-list">
+            </ul>
+        </section>
+
+    <div>
+        
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
