@@ -12,8 +12,13 @@
 
         <h1>Pose Reference Generator</h1>
 
+        <h3>This Generator will provide reference images and how-to-draw tutorials for your desired pose.</h3>
+
+        <p>Tip: To get more specific results, enter a subject and a pose/activity. 
+            Some examples are man sitting down, woman eating, dog barking, etc.</p>
+
         <form id="js-form">
-            <label for="js-pose">Please enter desired pose:</label><br>
+            <label for="js-pose">Please enter the desired pose:</label><br>
             <input type="text" name="pose" id="js-pose" placeholder="ex. person sitting down" required><br>
 
             <input type="submit" value="Search">
@@ -24,6 +29,7 @@
         <section id="image-results" class="hidden">
             <hr>
             <h2>Reference Images</h2>
+            <p>Click on an image to see its full size.</p>
             <hr>
             <ul id="image-result-list">
             </ul>
@@ -38,7 +44,7 @@
         </section>
 
     <div>
-        
+
     <script src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
