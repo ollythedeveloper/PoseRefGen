@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+form {
+    width: 50%;
+    margin: 0 auto;
+}
+
 button, input[type="text"] {
     padding: 5px;
 }
@@ -11,17 +16,33 @@ button:hover {
 }
   
 ul {
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
+    align-items: center;
+    justify-content: center;
 }
   
 li {
-    padding: 10px;
+    padding: 5px;
+    flex: auto;
+}
+
+h1 {
+    text-align: center;
 }
   
 .container {
     margin: 0 auto;
+    max-width: 600px;
+}
+
+iframe, img {
+    width: 100%;
+    border: solid black 2px;
+    border-radius: 20px;
 }
   
 .hidden {
