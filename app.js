@@ -24,7 +24,7 @@ function displayImageResults(responseJson){
 };
 
 function displayVideoReslts(responseJson){
-    $('#ivideo-result-list').empty();
+    $('#video-result-list').empty();
     for(let i = 0; i < responseJson.items.length; i++){
         $('#video-result-list').append(
             `<li>
