@@ -107,6 +107,7 @@ hr {
 .container {
     margin: 0 auto;
     max-width: 600px;
+    margin-bottom: 350px;
 }
 
 iframe, img {
