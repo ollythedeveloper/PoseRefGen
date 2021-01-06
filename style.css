@@ -2,18 +2,59 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: redressed;
+    src: url(fonts/Redressed-Regular.ttf);
+}
+
+body {
+    background-image: url(images/pastel-sky.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bottom-fill {
+    height: 350px;
+}
+
 form {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
 }
 
-button, input[type="text"] {
+input {
+    border-radius: 20px;
+    width: 100%;
+}
+
+input[type="text"] {
     padding: 5px;
+    font-family: 'American Typewriter';
+    font-size: 30px;
+}
+
+label, input[value] {
+    font-family: 'American Typewriter';
+    font-size: 25px;
+}
+
+.submit {
+    margin-top: 5px;
+    border: 0;
+    background: gainsboro;
+    box-shadow: 0 5px 0 darkslategray;
+    color: black;
+    cursor: pointer;
+    outline: 0;
+    transition: all linear;
+}
+
+.submit:active {
+    box-shadow: 0 2px 0 darkslategray;
+    transform: translateY(3px);
 }
   
-button:hover {
-    cursor: pointer;
-}
   
 ul {
     display: flex;
@@ -31,7 +72,36 @@ li {
 }
 
 h1 {
+    margin-top: 50px;
+    color: blueviolet;
+    -webkit-text-fill-color: blueviolet;
+    -webkit-text-stroke: 0.75px black;
+    font-family: redressed;
+    font-size: 55px;
     text-align: center;
+}
+
+h2 {
+    font-family: redressed;
+    font-size: 35px;
+    color: black;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: 'American Typewriter';
+    color: black;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'American Typewriter';
+    color: black;
+}
+
+hr {
+    height: 5px;
+    background-color: black;
 }
   
 .container {
