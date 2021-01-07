@@ -115,3 +115,25 @@ iframe, img {
 .hidden {
     display: none;
 }
+
+@media all and (min-width: 800px){
+    .container {
+        max-width: 900px;
+    }
+
+    h1 {
+        margin-top: 60px;
+        font-size: 70px;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .tip {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 100px;
+    }
+    
+}
