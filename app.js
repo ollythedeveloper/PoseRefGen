@@ -1,16 +1,19 @@
 'use strict';
+//Constants used in the functions
 const imageRootURL= 'https://api.unsplash.com/search/photos?';
 const imageAPI= 'ep8A89YFGZbZ6LVOC0XiSQB1gz_t239jb4znTUynjyk';
 const videoRootURL= 'https://www.googleapis.com/youtube/v3/search?';
 const videoAPI= 'AIzaSyB_80hd_V9QuYE39fqQ75hIFpYrTApnNuM';
 let imagePageNumber = 1;
 
+//This function formats the queryString used in the getReferenceImages and getYoutubeVideos functions
 function formatQueryParams(params){
     const queryItems = Object.keys(params)
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
     return queryItems.join('&');
 }
 
+//This function formats how the requested Unsplash data is displayed on the webpage
 function displayImageResults(responseJson){
     $('#image-result-list').empty();
     for (let i= 0; i < responseJson.results.length; i++){
@@ -23,6 +26,7 @@ function displayImageResults(responseJson){
     $('#image-results').removeClass('hidden');
 };
 
+//This function formats how the requested Youtube data is displayed on the webpage
 function displayVideoReslts(responseJson){
     $('#video-result-list').empty();
     for(let i = 0; i < responseJson.items.length; i++){
@@ -36,6 +40,9 @@ function displayVideoReslts(responseJson){
     $('#video-results').removeClass('hidden');
 };
 
+//This function formats the query url and requests data from the Unsplash API
+//If there are no errors the JSON response is put into the displayImageResults function
+//If there is an error, its caught and an error message displayed on the page
 function getReferenceImages(poseSearch){
     const params = {
         query: poseSearch,
@@ -59,7 +66,9 @@ function getReferenceImages(poseSearch){
         $('#js-error-message').text(`Something went wrong: ${err.message}`)
     })
 }
-
+//This function formats the query url and requests data from the Youtube API
+//If there are no errors the JSON response is put into the displayVideoResults function
+//If there is an error, its caught and an error message is displayed on the page
 function getYoutubeVideos(poseSearch){
     const params = {
         key: videoAPI,
@@ -85,7 +94,8 @@ function getYoutubeVideos(poseSearch){
         $('#js-error-message').text(`Something went wrong: ${err.message}`)
     })
 }
-
+//This function prevents the submit event default and puts the submited value(poseSearch) into
+//the getReferenceImages and getYoutubeVidoes functions
 function watchForm(){
     $('#js-form').submit(event => {
         event.preventDefault();
