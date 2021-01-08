@@ -116,6 +116,8 @@ iframe, img {
     display: none;
 }
 
+/* Desktop View Styling */
+
 @media all and (min-width: 800px){
     .container {
         max-width: 900px;
