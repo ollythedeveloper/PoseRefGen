@@ -19,7 +19,7 @@ function displayImageResults(responseJson){
     if(responseJson.total > 0){
     for (let i= 0; i < responseJson.results.length; i++){
         $('#image-result-list').append(
-            `<li><a href=${responseJson.results[i].urls.regular}>
+            `<li><a href=${responseJson.results[i].urls.regular} target="_blank">
             <img src=${responseJson.results[i].urls.thumb} alt=${responseJson.results[i].description}>
             </a>
             </li>`
