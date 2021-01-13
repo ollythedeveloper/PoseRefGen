@@ -116,6 +116,10 @@ iframe, img {
     display: none;
 }
 
+.error-message {
+    color: darkred;
+}
+
 /* Desktop View Styling */
 
 @media all and (min-width: 800px){

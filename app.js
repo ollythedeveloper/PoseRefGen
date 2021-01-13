@@ -16,6 +16,7 @@ function formatQueryParams(params){
 //This function formats how the requested Unsplash data is displayed on the webpage
 function displayImageResults(responseJson){
     $('#image-result-list').empty();
+    if(responseJson.total > 0){
     for (let i= 0; i < responseJson.results.length; i++){
         $('#image-result-list').append(
             `<li><a href=${responseJson.results[i].urls.regular}>
@@ -24,11 +25,17 @@ function displayImageResults(responseJson){
             </li>`
         )};
     $('#image-results').removeClass('hidden');
+    }else{
+        $('#image-result-list').append(
+            `<li><h3 class="error-message">No results found. Please try again.</h3></li>`
+        )};
+    $('#image-results').removeClass('hidden')
 };
 
 //This function formats how the requested Youtube data is displayed on the webpage
 function displayVideoReslts(responseJson){
     $('#video-result-list').empty();
+    if(responseJson.items.length > 0){
     for(let i = 0; i < responseJson.items.length; i++){
         $('#video-result-list').append(
             `<li>
@@ -36,6 +43,11 @@ function displayVideoReslts(responseJson){
             frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
             encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </li>`
+        )};
+    $('#video-results').removeClass('hidden');
+    }else{
+        $('#video-result-list').append(
+            `<li><h3 class="error-message">No results found. Please try again.</h3></li>`
         )};
     $('#video-results').removeClass('hidden');
 };
