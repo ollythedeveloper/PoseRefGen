@@ -40,7 +40,7 @@ function displayVideoReslts(responseJson){
         $('#video-result-list').append(
             `<li>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/${responseJson.items[i].id.videoId}" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+            allow="accelerometer; autoplay; clipboard-write; 
             encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </li>`
         )};
